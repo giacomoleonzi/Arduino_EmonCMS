@@ -2,7 +2,7 @@
 Arduino IDE ESP8266 - Emoncms Library
 ===========================================
 
-An Arduino IDE library around the Emoncms pubblishing for ESP8266.
+An Arduino IDE library around the Emoncms publishing for ESP8266.
 By `GiacomoLeonzi, giacomoleonzi@gmail.com`_
 
 =================
@@ -37,7 +37,7 @@ Table of contents
 _`Introduction`
 ===============
 
-This library provides some simple function to pubblish data on `Emoncms <https://emoncms.org>`_, written using Arduino IDE for ESP8266.
+This library provides some simple function to publish data on `Emoncms <https://emoncms.org>`_, written using Arduino IDE for ESP8266.
 For all details about how to install and use Arduino IDE with ESP8266, refer to `Arduino core for ESP8266 WiFi chip <https://github.com/esp8266/Arduino>`_.
 
 =========
@@ -48,7 +48,7 @@ _`Status`
 _`Emoncms`
 -------------------------
 
-To pubblish on Emoncms, you just need to do a get query like:
+To publish on Emoncms, you just need to do a get query like:
 ` http://<emoncms_url>/input/post?json={power:200}&apikey=<apikey>`_
 
 **<emoncms_url>** is the url of the cms of OpenEnergyMonitor (to substitute with emoncms.org in case of cloud use).
@@ -106,7 +106,7 @@ To post data **Write API Key** is needed, **Read API Key** is needed to read dat
 _`Input`
 -----------
 
-In the **Input** section we can find all the kind of data pubblished trought our account or with ours **APIKEY**.
+In the **Input** section we can find all the kind of data published trought our account or with ours **APIKEY**.
 But the data are no logged, so we can see only the last value	inserted for each variable.
 
 -----------
