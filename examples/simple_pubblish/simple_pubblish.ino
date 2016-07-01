@@ -2,7 +2,7 @@
  *  This sketch is a basic example to send data on emoncms.org due to the
  *  Arduino_EmonCMS library.
  *
- *  at the moment the data pubblished are random value,
+ *  at the moment the data published are random value,
  *  substitute the data1 and data2 with your measure
  *  written by Giacomo Leonzi
  */
@@ -50,7 +50,7 @@ void loop() {
   if (now - lastRequest >= postingInterval) {
     emoncms.addValue("data1", data1);
     emoncms.addValue("data2", data2);
-    Serial.println(emoncms.pubblish());  //open the connection and pubblish
+    Serial.println(emoncms.publish());  //open the connection and publish
     lastRequest = now;
   }
   delay(10);

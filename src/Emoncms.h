@@ -1,7 +1,7 @@
 /*
   Copyright (c) 2015 Giacomo Leonzi. All right reserved.
 
-  ArduinoEmoncms - Library to pubblish data on Emoncsm.org
+  Emoncms - Library to publish data on Emoncsm.org
 
   This library is free software; you can redistribute it and/or
   modify it under the terms of the GNU Lesser General Public
@@ -19,31 +19,30 @@
   */
 
 
-#ifndef ArduinoEmoncms_h
-#define ArduinoEmoncms_h
+#ifndef Emoncms_h
+#define Emoncms_h
 
 #include <Arduino.h>
-//depends on your board
-#include <ESP8266WiFi.h>
+#include <Client.h>
 
-
-class ArduinoEmoncms
+class Emoncms
 {
 
   public:
+Emoncms();
 
-  ArduinoEmoncms(String, int, String); //need ip address, port, APIKEY to write on emoncms
+void begin(String host, int port, String APIKEY,Client& _client);
+
 	void addValue(String, int); //need key, name of parameter measured, and its value
-	String pubblish();//pubblish
+	String publish();//publish
 
   private:
     String _jsonString;  // cookies forwarded by proxyssl (once per session)
     String _url;
     String _host;
-    char _host2[15];
     int _port;
     String _APIKEY;
-    WiFiClient _client;
+    Client* client;
 };
 
 #endif
