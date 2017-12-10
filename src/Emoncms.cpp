@@ -49,6 +49,19 @@ void Emoncms::addValue(String key, int value)  {
 }
 
 /*************************************************************************************
+* addValue - function to build the string json format to comunicate with emoncms.org*
+* you need to give a name value colled key and it's value in a float variable				 *
+************************************************************************************/
+
+void Emoncms::addValue(String key, float value)  {
+
+	if(_jsonString!="")_jsonString +=",";//add the comma only when is not the first or only data added
+	_jsonString += key;
+	_jsonString += ":";
+	_jsonString += String(value);
+}
+
+/*************************************************************************************
 * publish - function to publish on emoncms.org the data measured                  *
 * this function build the string to send, open the comunication through the server  *
 * and send all the data.
