@@ -33,7 +33,9 @@ Emoncms();
 
 void begin(String host, int port, String APIKEY,Client& _client);
 
-	void addValue(String, int); //need key, name of parameter measured, and its value
+	void addValue(String, int);   //need key, name of parameter measured, and its value
+	void addValue(String, float); //need key, name of parameter measured, and its value
+
 	String publish();//publish
 
   private:
